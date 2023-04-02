@@ -21,7 +21,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="/public/images/apple-icon.png">
     <link rel="icon" type="image/png" href="/public/images/favicon.png">
     <title>
-        Material Dashboard 2 by Creative Tim
+        Tech Report - Novo Cadastro
     </title>
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css"
@@ -47,14 +47,14 @@
             <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/material-dashboard/pages/dashboard "
                 target="_blank">
                 <img src="/public/images/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
-                <span class="ms-1 font-weight-bold text-white">Material Dashboard 2</span>
+                <span class="ms-1 font-weight-bold text-white">Tech Report</span>
             </a>
         </div>
         <hr class="horizontal light mt-0 mb-2">
         <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link text-white active bg-gradient-primary" href="/views/adicionar.ejs">
+                    <a class="nav-link text-white" href="/">
                         <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="material-icons opacity-10">table_view</i>
                         </div>
@@ -62,7 +62,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white " href="../pages/adicionar.html">
+                    <a class="nav-link text-white active bg-gradient-primary" href="/new">
                         <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="material-icons opacity-10">dashboard</i>
                         </div>
@@ -70,7 +70,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white " href="../pages/profile.html">
+                    <a class="nav-link text-white " href="/perfil">
                         <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="material-icons opacity-10">person</i>
                         </div>
@@ -78,19 +78,11 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white " href="../pages/sign-in.html">
+                    <a class="nav-link text-white " href="/singin">
                         <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="material-icons opacity-10">login</i>
                         </div>
-                        <span class="nav-link-text ms-1">Sign In</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white " href="../pages/sign-up.html">
-                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="material-icons opacity-10">assignment</i>
-                        </div>
-                        <span class="nav-link-text ms-1">Sign Up</span>
+                        <span class="nav-link-text ms-1">Log Out</span>
                     </a>
                 </li>
             </ul>
@@ -114,140 +106,140 @@
                                             <tbody>
                                                 <tr>
                                                     <td class="align-middle text-center text-sm">
+                                                        <label class="form-label">Empresa</label>
                                                         <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">Empresa</label>
                                                             <input type="text" class="form-control">
                                                         </div>
                                                     </td>
                                                     <td class="align-middle text-center text-sm">
+                                                        <label class="form-label">CNPJ</label>
                                                         <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">CNPJ</label>
                                                             <input type="text" class="form-control">
                                                         </div>
                                                     </td>
                                                     <td class="align-middle text-center text-sm">
+                                                        <label class="form-label">Telefone</label>
                                                         <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">Telefone</label>
                                                             <input type="text" class="form-control">
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="align-middle text-center text-sm">
+                                                        <label class="form-label">Endereço</label>
                                                         <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">Endereço</label>
                                                             <input type="text" class="form-control">
                                                         </div>
                                                     </td>
-                                                    <td>
+                                                    <td class="align-middle text-center text-sm">
+                                                        <label class="form-label">Patrimônio Líquido</label>
                                                         <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">Patrimônio Líquido</label>
                                                             <input type="text" class="form-control">
                                                         </div>
                                                     </td>
-                                                    <td>
+                                                    <td class="align-middle text-center text-sm">
+                                                        <label class="form-label">Receita Líquida</label>
                                                         <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">Receita Líquida</label>
                                                             <input type="text" class="form-control">
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="align-middle text-center text-sm">
-                                                        <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">Lucro Bruto</label>
+                                                        <label class="form-label">Lucro Bruto</label>
+                                                        <div class="input-group input-group-outline mb-3">                                                            
                                                             <input type="text" class="form-control">
                                                         </div>
                                                     </td>
-                                                    <td>
+                                                    <td class="align-middle text-center text-sm">
+                                                        <label class="form-label">Despesas (VGA)</label>
                                                         <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">Despesas (VGA)</label>
                                                             <input type="text" class="form-control">
                                                         </div>
                                                     </td>
-                                                    <td>
+                                                    <td class="align-middle text-center text-sm">
+                                                        <label class="form-label">PD&I</label>
                                                         <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">PD&I</label>
                                                             <input type="text" class="form-control">
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="align-middle text-center text-sm">
+                                                        <label class="form-label">D&A</label>
                                                         <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">D&A</label>
                                                             <input type="text" class="form-control">
                                                         </div>
                                                     </td>
-                                                    <td>
+                                                    <td class="align-middle text-center text-sm">
+                                                        <label class="form-label">Resultado Financeiro</label>
                                                         <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">Resultado Financeiro</label>
                                                             <input type="text" class="form-control">
                                                         </div>
                                                     </td>
-                                                    <td>
+                                                    <td class="align-middle text-center text-sm">
+                                                        <label class="form-label">Resultado antes dos Impostos</label>
                                                         <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">Resultado antes dos Impostos</label>
                                                             <input type="text" class="form-control">
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="align-middle text-center text-sm">
+                                                        <label class="form-label">Impostos</label>
                                                         <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">Impostos</label>
                                                             <input type="text" class="form-control">
                                                         </div>
                                                     </td>
-                                                    <td>
+                                                    <td class="align-middle text-center text-sm">
+                                                        <label class="form-label">Lucro Líquido</label>
                                                         <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">Lucro Líquido</label>
                                                             <input type="text" class="form-control">
                                                         </div>
                                                     </td>
-                                                    <td>
+                                                    <td class="align-middle text-center text-sm">
+                                                        <label class="form-label">Caixa</label>
                                                         <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">Caixa</label>
                                                             <input type="text" class="form-control">
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="align-middle text-center text-sm">
+                                                        <label class="form-label">Dívida</label>
                                                         <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">Dívida</label>
                                                             <input type="text" class="form-control">
                                                         </div>
                                                     </td>
-                                                    <td>
+                                                    <td class="align-middle text-center text-sm">
+                                                        <label class="form-label">FCO</label>
                                                         <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">FCO</label>
                                                             <input type="text" class="form-control">
                                                         </div>
                                                     </td>
-                                                    <td>
+                                                    <td class="align-middle text-center text-sm">
+                                                        <label class="form-label">FCI</label>
                                                         <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">FCI</label>
                                                             <input type="text" class="form-control">
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="align-middle text-center text-sm">
+                                                        <label class="form-label">CAPEX</label>
                                                         <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">CAPEX</label>
                                                             <input type="text" class="form-control">
                                                         </div>
                                                     </td>
-                                                    <td>
+                                                    <td class="align-middle text-center text-sm">
+                                                        <label class="form-label">FCF</label>
                                                         <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">FCF</label>
                                                             <input type="text" class="form-control">
                                                         </div>
                                                     </td>
-                                                    <td>
+                                                    <td class="align-middle text-center text-sm">
+                                                        <label class="form-label">Pagamento de Div. e JSCP</label>
                                                         <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">Pagamento de Div. e JSCP</label>
                                                             <input type="text" class="form-control">
                                                         </div>
                                                     </td>
@@ -255,9 +247,9 @@
                                                 <tr>
                                                     <td></td>
                                                     <td class="buttons-tables">
-                                                        <button class="btn bg-gradient-salvar w-100 mb-0 toast-btn"
-                                                            type="button" data-target="successToast">Cancelar</button>
                                                         <button class="btn bg-gradient-cancelar w-100 mb-0 toast-btn"
+                                                            type="button" data-target="successToast" href="/index">Cancelar</button>
+                                                        <button class="btn bg-gradient-salvar w-100 mb-0 toast-btn"
                                                             type="button" data-target="successToast">Salvar</button>
                                                     </td>
                                                     <td></td>
