@@ -30,8 +30,8 @@ router.get('/editar', function(req, res, next) {
 /* ->  ------------------------------------------------------------------------------------------------------*/
 
 /*EXCLUIR ->  ------------------------------------------------------------------------------------------------------*/
-router.get('/editar', function(req, res, next) {
-  res.render('editar', { title: "Editar", action: "/editar" })
+router.get('/excluir', function(req, res, next) {
+  res.render('excluir', { title: "Excluir", action: "/excluir" })
 })
 /* ->  ------------------------------------------------------------------------------------------------------*/
 
@@ -40,9 +40,6 @@ router.get('/dash', function(req, res, next) {
   res.render('dash', { title: "Dashboard da Empresa", action: "/dash" })
 })
 /* ->  ------------------------------------------------------------------------------------------------------*/
-
-
-
 
 
 
@@ -78,6 +75,7 @@ router.post('/new', async function(req, res, next) {
   const despesas_vga = req.body.despesas_vga
   const pdi = req.body.pdi
   const da = req.body.da
+  const despesas_financeiras = req.body.despesas_financeiras
   const resultado_financeiro = req.body.resultado_financeiro
   const resultado_antes_impostos = req.body.resultado_antes_impostos
   const impostos = req.body.impostos
@@ -91,7 +89,7 @@ router.post('/new', async function(req, res, next) {
   const pagamento_div_jscp  = req.body.pagamento_div_jscp
   const id_usu = req.body.id_usu
   try { 
-    await global.db.insertEmpresa({id_empresa, nome, email, cnpj, telefone, patrimonio_liquido, receita_liquida, lucro_bruto, despesas_vga, pdi, da, resultado_financeiro, resultado_antes_impostos, impostos, lucro_liquido, caixa, divida, fco, fci, capex, fcf, pagamento_div_jscp, id_usu})
+    await global.db.insertEmpresa({id_empresa, nome, email, cnpj, telefone, patrimonio_liquido, receita_liquida, lucro_bruto, despesas_vga, pdi, da, despesas_financeiras, resultado_financeiro, resultado_antes_impostos, impostos, lucro_liquido, caixa, divida, fco, fci, capex, fcf, pagamento_div_jscp, id_usu})
     res.redirect('/?new=true'); 
   } catch (error) { 
     res.redirect('/?erro=' + error); 
