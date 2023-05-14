@@ -28,109 +28,311 @@ async function insertEmpresa(empresa) {
 } 
 
 //Função de Margem - Lucro Bruto / Receita Líq.
-function MLucBruRecLiq(num1, num2) {
-    return lucro_bruto/receita_liquida;
-}  
+async function MLucBruRecLiq(callback) {
+    const query = 'SELECT lucro_bruto, receita_liquida FROM empresa';
+    connection.query(query, (error, results) => {
+      if (error) {
+        callback(error, null);
+        return;
+      }
+  
+      const lucrobruto = results[0].lucro_bruto;
+      const receitaliquida = results[0].receita_liquida;
+      const resultado = lucrobruto/receitaliquida; // Aqui, realizamos o cálculo
+  
+      callback(null, resultado);
+    });
+  }
 
 //Função de Margem - P&D/Lucro Bruto
-function MPDLucBru(num1, num2) {
-    return pdi/lucro_bruto;
+async function MPDLucBru(callback) {
+    const query = 'SELECT pdi, lucro_bruto FROM empresa';
+    connection.query(query, (error, results) => {
+      if (error) {
+        callback(error, null);
+        return;
+      }
+  
+      const pdi = results[0].pdi;
+      const lucrobruto = results[0].lucro_bruto;
+      const resultado = pdi/lucrobruto; // Aqui, realizamos o cálculo
+  
+      callback(null, resultado);
+    });
 } 
 
 //Função de Margem - Margem - D&A/Lucro Bruto
-function MDALucBru(num1, num2) {
-    return da/lucro_bruto;
+async function MDALucBru(callback) {
+    const query = 'SELECT da, lucro_bruto FROM empresa';
+    connection.query(query, (error, results) => {
+      if (error) {
+        callback(error, null);
+        return;
+      }
+  
+      const da = results[0].da;
+      const lucrobruto = results[0].lucro_bruto;
+      const resultado = da/lucrobruto; // Aqui, realizamos o cálculo
+  
+      callback(null, resultado);
+    });
 } 
 
 //Função de EBITDA	
-function EBITDA(num1, num2) {
-    return lucro_liquido-impostos-despesas_financeiras-da;
+async function EBITDA(callback) {
+    const query = 'SELECT lucro_liquido, impostos, despesas_financeiras, da FROM empresa';
+    connection.query(query, (error, results) => {
+      if (error) {
+        callback(error, null);
+        return;
+      }
+  
+      const lucro_liquido = results[0].lucro_liquido;
+      const impostos = results[0].impostos;
+      const despesas_financeiras = results[0].despesas_financeiras;
+      const da = results[0].da;
+      const resultado = lucro_liquido-impostos-despesas_financeiras-da; // Aqui, realizamos o cálculo
+  
+      callback(null, resultado);
+    });
 } 
 
 //Função de EBITDA/Receita Líq.	
-function EBITDARecLiq(num1, num2) {
+async function EBITDARecLiq(callback) {
+    const query = 'SELECT receita_liquida FROM empresa';
+    connection.query(query, (error, results) => {
+      if (error) {
+        callback(error, null);
+        return;
+      }
+  
+      
     const ebitida = EBITIDA
-    return ebitida/receita_liquida;
+      const receita_liquida = results[0].receita_liquida;
+      const resultado = ebitida/receita_liquida; // Aqui, realizamos o cálculo
+  
+      callback(null, resultado);
+    });
 } 
 
 //Função de EBIT	
-function EBIT(num1, num2) {
-    return lucro_liquido-impostos-despesas_financeiras;
+async function EBIT(callback) {
+    const query = 'SELECT lucro_liquido, impostos, despesas_financeiras FROM empresa';
+    connection.query(query, (error, results) => {
+      if (error) {
+        callback(error, null);
+        return;
+      }
+  
+      
+      const lucro_liquido = results[0].lucro_liquido;
+      const impostos = results[0].impostos;
+      const despesas_financeiras = results[0].despesas_financeiras;
+      const resultado = lucro_liquido-impostos-despesas_financeiras; // Aqui, realizamos o cálculo
+  
+      callback(null, resultado);
+    });
 } 
 
 //Função de EBIT/Receita Líq.
-function EBITRecLiq(num1, num2) {
-    const ebit = EBIT
-    return ebit/receita_liquida;
+async function EBITRecLiq(callback) {
+    const query = 'SELECT receita_liquida FROM empresa';
+    connection.query(query, (error, results) => {
+      if (error) {
+        callback(error, null);
+        return;
+      }
+  
+      
+      const ebit = EBIT
+      const receita_liquida = results[0].receita_liquida;
+      const resultado = ebit/receita_liquida; // Aqui, realizamos o cálculo
+  
+      callback(null, resultado);
+    });
 } 
 
 //Função de Despesas com Juros/EBIT
-function DespEBIT(num1, num2) {
-    const ebit = EBIT
-    return despesas_financeiras/ebit;
+async function DespEBIT(num1, num2) {
+    const query = 'SELECT despesas_financeiras FROM empresa';
+    connection.query(query, (error, results) => {
+      if (error) {
+        callback(error, null);
+        return;
+      }
+  
+      
+      const ebit = EBIT
+      const despesas_financeiras = results[0].despesas_financeiras;
+      const resultado = despesas_financeiras/ebit; // Aqui, realizamos o cálculo
+  
+      callback(null, resultado);
+    });
 } 
 
 //Função de Margem de Lucro antes dos impostos
-function MLucAntImp(num1, num2) {
-    return resultado_antes_impostos/receita_liquida;
+async function MLucAntImp(callback) {
+    const query = 'SELECT resultado_antes_impostos, receita_liquida FROM empresa';
+    connection.query(query, (error, results) => {
+      if (error) {
+        callback(error, null);
+        return;
+      }
+  
+      
+      const resultado_antes_impostos = results[0].resultado_antes_impostos;
+      const receita_liquida = results[0].receita_liquida;
+      const resultado = resultado_antes_impostos/receita_liquida; // Aqui, realizamos o cálculo
+  
+      callback(null, resultado);
+    });
 } 
 
 //Função de Margem - Lucro Líq/Receita
-function MLucLiqRec(num1, num2) {
-    return lucro_liquido/receita_liquida;
+async function MLucLiqRec(num1, num2) {
+    const query = 'SELECT resultado_antes_impostos, receita_liquida FROM empresa';
+    connection.query(query, (error, results) => {
+      if (error) {
+        callback(error, null);
+        return;
+      }
+  
+      
+      const resultado_antes_impostos = results[0].resultado_antes_impostos;
+      const receita_liquida = results[0].receita_liquida;
+      const resultado = resultado_antes_impostos/receita_liquida; // Aqui, realizamos o cálculo
+  
+      callback(null, resultado);
+    });
+    
 } 
 
 //Função de ROE
-function ROE(num1, num2) {
-    return lucro_liquido/patrimonio_liquido;
+async function ROE(callback) {
+    const query = 'SELECT lucro_liquido, patrimonio_liquido FROM empresa';
+    connection.query(query, (error, results) => {
+      if (error) {
+        callback(error, null);
+        return;
+      }
+  
+      
+      const patrimonio_liquido = results[0].patrimonio_liquido;
+      const lucro_liquido= results[0].lucro_liquido;
+      const resultado = lucro_liquido/patrimonio_liquido; // Aqui, realizamos o cálculo
+  
+      callback(null, resultado);
+    });
+    
 } 
 
 //Função de Dívida Líquida/EBITDA
-function DivLiqEBITIDA(num1, num2) {
+async function DivLiqEBITIDA(num1, num2) {
+    
+    
     const sub = divida-caixa
     return sub/EBITIDA;
 } 
 
 //Função de FCT
-function FCT(num1, num2) {
-    return fco+fci+fcf
+async function FCT(callback) {
+    const query = 'SELECT fco, fci, fcf FROM empresa';
+    connection.query(query, (error, results) => {
+      if (error) {
+        callback(error, null);
+        return;
+      }
+  
+      
+      const fco = results[0].fco;
+      const fci= results[0].fci;
+      const fcf= results[0].fcf;
+      const resultado = fco/fci/fcf; // Aqui, realizamos o cálculo
+  
+      callback(null, resultado);
+    });
+    
 } 
 
 //Função de FCL
-function FCLCAPEX(num1, num2) {
-    return fco+capex;
+async function FCLCAPEX(callback) {
+    const query = 'SELECT fco, capex FROM empresa';
+    connection.query(query, (error, results) => {
+      if (error) {
+        callback(error, null);
+        return;
+      }
+  
+      
+      const fco = results[0].fco;
+      const capex= results[0].capex;
+      const resultado = fco/capex; // Aqui, realizamos o cálculo
+  
+      callback(null, resultado);
+    });
+    
+    
 } 
 
 //Função de Capex/FCO	
-function CapexFCO(num1, num2) {
-    return capex/fco;
+async function CapexFCO(callback) {
+    const query = 'SELECT fco, capex FROM empresa';
+    connection.query(query, (error, results) => {
+      if (error) {
+        callback(error, null);
+        return;
+      }
+  
+      
+      const fco = results[0].fco;
+      const capex= results[0].capex;
+      const resultado = capex/fco; // Aqui, realizamos o cálculo
+  
+      callback(null, resultado);
+    });
+    
 } 
 
 //Função de Capex/D&A	
-function CapexDA(num1, num2) {
-    return capex/da;
+async function CapexDA(callback) {
+    const query = 'SELECT capex, da FROM empresa';
+    connection.query(query, (error, results) => {
+      if (error) {
+        callback(error, null);
+        return;
+      }
+  
+      
+      const da = results[0].da;
+      const capex= results[0].capex;
+      const resultado = capex/da; // Aqui, realizamos o cálculo
+  
+      callback(null, resultado);
+    });
+    
+    
 } 
 
 //Função de Capex/Lucro Líq.
-function CapexLucLiq(num1, num2) {
+async function CapexLucLiq(num1, num2) {
     return capex/lucro_liquido;
 } 
 
 //Função de Payout	
-function Payout(num1, num2) {
+async function Payout(num1, num2) {
     return pagamento_div_jscp/lucro_liquido;
 } 
 
 //Função de Tributos/Receita
-function TribRec(num1, num2) {
+async function TribRec(num1, num2) {
     return impostos/receita_liquida;
 } 
 
 //Função de Tributos/Renda
-function MLucBruRecLiq(num1, num2) {
+async function TribRend(num1, num2) {
     return impostos/resultado_antes_impostos;
 } 
 
 connect(); 
 
-module.exports = { selectEmpresas, insertEmpresa }
+module.exports = { selectEmpresas, insertEmpresa, MLucBruRecLiq }

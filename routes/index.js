@@ -14,9 +14,6 @@ router.get('/', async function (req, res) {
 })
 /* ->  ------------------------------------------------------------------------------------------------------*/
 
-
-
-
 /*PERFIL ->  ------------------------------------------------------------------------------------------------------*/
 router.get('/perfil', function(req, res, next) {
   res.render('perfil', { title: "Perfil", action: "/perfil" })
@@ -76,7 +73,6 @@ router.post('/new', async function(req, res, next) {
   const pdi = req.body.pdi
   const da = req.body.da
   const despesas_financeiras = req.body.despesas_financeiras
-  const resultado_financeiro = req.body.resultado_financeiro
   const resultado_antes_impostos = req.body.resultado_antes_impostos
   const impostos = req.body.impostos
   const lucro_liquido = req.body.lucro_liquido
