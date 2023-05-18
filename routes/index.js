@@ -15,8 +15,17 @@ router.get('/', async function (req, res) {
 /* ->  ------------------------------------------------------------------------------------------------------*/
 
 /*PERFIL ->  ------------------------------------------------------------------------------------------------------*/
-router.get('/perfil', function(req, res, next) {
-  res.render('perfil', { title: "Perfil", action: "/perfil" })
+
+
+/* GET dados page. */ 
+router.get('/perfil', async function (req, res) { 
+  try { 
+    const results = await global.db.selectUsuarios();
+    console.log(results);
+     res.render('perfil', { results });
+  } catch (error) { 
+    res.redirect('/?erro=' + error);
+  } 
 })
 /* ->  ------------------------------------------------------------------------------------------------------*/
 
