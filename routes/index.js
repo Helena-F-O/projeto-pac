@@ -1,32 +1,30 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const { ensureAuthenticated, passport } = require('../auth');
 
-/*INDEX ->  ------------------------------------------------------------------------------------------------------*/
-/* GET home page. */ 
-router.get('/', async function (req, res) { 
-  try { 
+// Rota de login
+router.post('/login', passport.authenticate('local', {
+  successRedirect: '/perfil', // Redireciona para a página do usuário em caso de autenticação bem-sucedida
+  failureRedirect: '/login', // Redireciona para a página de login em caso de falha na autenticação
+}));
+
+/* GET home page. */
+router.get('/', async function(req, res) {
+  try {
     const results = await global.db.selectEmpresas();
     console.log(results);
-     res.render('index', { results });
-  } catch (error) { 
+    res.render('index', { results });
+  } catch (error) {
     res.redirect('/?erro=' + error);
-  } 
-})
-/* ->  ------------------------------------------------------------------------------------------------------*/
-
-/*PERFIL ->  ------------------------------------------------------------------------------------------------------*/
+  }
+});
 
 
-/* GET dados page. */ 
-router.get('/perfil', async function (req, res) { 
-  try { 
-    const results = await global.db.selectUsuarios();
-    console.log(results);
-     res.render('perfil', { results });
-  } catch (error) { 
-    res.redirect('/?erro=' + error);
-  } 
-})
+/* GET dados page */
+router.get('/perfil', ensureAuthenticated, function(req, res) {
+  res.render('perfil', { user: req.user });
+});
+
 /* ->  ------------------------------------------------------------------------------------------------------*/
 
 /*EDIT ->  ------------------------------------------------------------------------------------------------------*/
