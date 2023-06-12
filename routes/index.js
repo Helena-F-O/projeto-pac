@@ -1,36 +1,51 @@
-const express = require('express');
-const router = express.Router();
-const { ensureAuthenticated, passport } = require('../auth');
+var express = require('express');
+var router = express.Router();
 
-// Rota de login
-router.post('/login', passport.authenticate('local', {
-  successRedirect: '/perfil', // Redireciona para a página do usuário em caso de autenticação bem-sucedida
-  failureRedirect: '/login', // Redireciona para a página de login em caso de falha na autenticação
-}));
-
-/* GET home page. */
-router.get('/', async function(req, res) {
-  try {
+/*INDEX ->  ------------------------------------------------------------------------------------------------------*/
+/* GET home page. */ 
+router.get('/', async function (req, res) { 
+  try { 
     const results = await global.db.selectEmpresas();
     console.log(results);
-    res.render('index', { results });
-  } catch (error) {
+     res.render('index', { results });
+  } catch (error) { 
     res.redirect('/?erro=' + error);
-  }
-});
+  } 
+})
+/* ->  ------------------------------------------------------------------------------------------------------*/
+
+/*PERFIL ->  ------------------------------------------------------------------------------------------------------*/
 
 
-/* GET dados page */
-router.get('/perfil', ensureAuthenticated, function(req, res) {
-  res.render('perfil', { user: req.user });
-});
-
+/* GET dados page. */ 
+router.get('/perfil', async function (req, res) { 
+  try { 
+    const results = await global.db.selectUsuarios();
+    console.log(results);
+     res.render('perfil', { results });
+  } catch (error) { 
+    res.redirect('/?erro=' + error);
+  } 
+})
 /* ->  ------------------------------------------------------------------------------------------------------*/
 
 /*EDIT ->  ------------------------------------------------------------------------------------------------------*/
 router.get('/editar', function(req, res, next) {
-  res.render('editar', { title: "Editar", action: "/editar" })
+  res.render('editar', { title: "Editar Empresa", action: "/editar" })
 })
+
+/*// Rota para exibir os dados da loja
+router.get('/editar', async function (req, res) { 
+  try { 
+    const results = await global.db.selectEmpresas();
+    console.log(results);
+     res.render('index', { results });
+  } catch (error) { 
+    res.redirect('/?erro=' + error);
+  } 
+})*/
+
+
 /* ->  ------------------------------------------------------------------------------------------------------*/
 
 /*EXCLUIR ->  ------------------------------------------------------------------------------------------------------*/
@@ -40,8 +55,14 @@ router.get('/excluir', function(req, res, next) {
 /* ->  ------------------------------------------------------------------------------------------------------*/
 
 /*DASH ->  ------------------------------------------------------------------------------------------------------*/
-router.get('/dash', function(req, res, next) {
-  res.render('dash', { title: "Dashboard da Empresa", action: "/dash" })
+router.get('/dash', async function (req, res) { 
+  try { 
+    const MLucBruRecLiq = await global.db.MLucBruRecLiq();
+    console.log(results);
+     res.render('dash', { MLucBruRecLiq });
+  } catch (error) { 
+    res.redirect('/?erro=' + error);
+  } 
 })
 /* ->  ------------------------------------------------------------------------------------------------------*/
 

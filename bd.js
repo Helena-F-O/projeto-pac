@@ -327,24 +327,76 @@ async function CapexDA(callback) {
 
 //Função de Capex/Lucro Líq.
 async function CapexLucLiq(num1, num2) {
-    return capex/lucro_liquido;
+  const query = 'SELECT capex, lucro_liquido FROM empresa';
+    connection.query(query, (error, results) => {
+      if (error) {
+        callback(error, null);
+        return;
+      }
+  
+      
+      const lucro_liquido = results[0].lucro_liquido;
+      const capex= results[0].capex;
+      const resultado = capex/lucro_liquido; // Aqui, realizamos o cálculo
+  
+      callback(null, resultado);
+    });
 } 
 
 //Função de Payout	
 async function Payout(num1, num2) {
-    return pagamento_div_jscp/lucro_liquido;
+  const query = 'SELECT pagamento_div_jscp, lucro_liquido FROM empresa';
+    connection.query(query, (error, results) => {
+      if (error) {
+        callback(error, null);
+        return;
+      }
+  
+      
+      const lucro_liquido = results[0].lucro_liquido;
+      const pagamento_div_jscp= results[0].pagamento_div_jscp;
+      const resultado = pagamento_div_jscp/lucro_liquido; // Aqui, realizamos o cálculo
+  
+      callback(null, resultado);
+    });
 } 
 
 //Função de Tributos/Receita
 async function TribRec(num1, num2) {
-    return impostos/receita_liquida;
+  const query = 'SELECT impostos, receita_liquida FROM empresa';
+    connection.query(query, (error, results) => {
+      if (error) {
+        callback(error, null);
+        return;
+      }
+  
+      
+      const receita_liquida = results[0].receita_liquida;
+      const impostos= results[0].impostos;
+      const resultado = impostos/receita_liquida; // Aqui, realizamos o cálculo
+  
+      callback(null, resultado);
+    });
 } 
 
 //Função de Tributos/Renda
 async function TribRend(num1, num2) {
-    return impostos/resultado_antes_impostos;
+  const query = 'SELECT impostos, resultado_antes_impostos FROM empresa';
+    connection.query(query, (error, results) => {
+      if (error) {
+        callback(error, null);
+        return;
+      }
+  
+      
+      const resultado_antes_impostos = results[0].resultado_antes_impostos;
+      const impostos= results[0].impostos;
+      const resultado = impostos/resultado_antes_impostos; // Aqui, realizamos o cálculo
+  
+      callback(null, resultado);
+    });
 } 
 
 connect(); 
 
-module.exports = { selectEmpresas, selectUsuarios, insertEmpresas, insertUsuarios}
+module.exports = { selectEmpresas, selectUsuarios, insertEmpresas, insertUsuarios, MLucBruRecLiq, MPDLucBru, MDALucBru, EBITDA, EBITDARecLiq, EBIT, EBITRecLiq, DespEBIT, MLucAntImp, MLucLiqRec, ROE, DivLiqEBITIDA, FCT, FCLCAPEX, CapexFCO, CapexDA, CapexLucLiq, Payout, TribRec, TribRend}

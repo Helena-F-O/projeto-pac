@@ -94,195 +94,197 @@
         </div>
     </aside>
     <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
-        
-            <div class="container-fluid py-4">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card my-4">
-                            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-                                <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
-                                    <h6 class="text-white text-capitalize ps-3">Edição Cadastro</h6>
-                                </div>
+
+        <div class="container-fluid py-4">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card my-4">
+                        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                            <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                                <h6 class="text-white text-capitalize ps-3">Edição Cadastro</h6>
                             </div>
-                            <div class="card-body px-0 pb-2">
-                                <div class="table-responsive p-0">
-                                    <form action="<%= action %>" method="POST"></form>
-                                        <table class="table align-items-center mb-0">
-                                            <tbody>
-                                                <tr>
-                                                    <td class="align-middle text-center text-sm">
-                                                        <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">Código</label>
-                                                            <input type="text" class="form-control">
-                                                        </div>
-                                                    </td>
-                                                    <td class="align-middle text-center text-sm">
-                                                        <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">Empresa</label>
-                                                            <input type="text" class="form-control">
-                                                        </div>
-                                                    </td>
-                                                    <td class="align-middle text-center text-sm">
-                                                        <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">CNPJ</label>
-                                                            <input type="text" class="form-control">
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="align-middle text-center text-sm">
-                                                        <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">Telefone</label>
-                                                            <input type="text" class="form-control">
-                                                        </div>
-                                                    </td>
-                                                    <td class="align-middle text-center text-sm">
-                                                        <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">Email</label>
-                                                            <input type="text" class="form-control">
-                                                        </div>
-                                                    </td>
-                                                    <td class="align-middle text-center text-sm">
-                                                        <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">Patrimônio Líquido</label>
-                                                            <input type="text" class="form-control">
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="align-middle text-center text-sm">
-                                                        <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">Receita Líquida</label>
-                                                            <input type="text" class="form-control">
-                                                        </div>
-                                                    </td>
-                                                    <td class="align-middle text-center text-sm">
-                                                        <div class="input-group input-group-outline mb-3"> 
-                                                            <label class="form-label">Lucro Bruto</label>                                                           
-                                                            <input type="text" class="form-control">
-                                                        </div>
-                                                    </td>
-                                                    <td class="align-middle text-center text-sm">
-                                                        <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">Despesas (VGA)</label>
-                                                            <input type="text" class="form-control">
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="align-middle text-center text-sm">
-                                                        <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">PD&I</label>
-                                                            <input type="text" class="form-control">
-                                                        </div>
-                                                    </td>
-                                                    <td class="align-middle text-center text-sm">
-                                                        <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">Despesas Financeira</label>
-                                                            <input type="text" class="form-control">
-                                                        </div>
-                                                    </td>
-                                                    <td class="align-middle text-center text-sm">
-                                                        <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">Resultado antes dos Impostos</label>
-                                                            <input type="text" class="form-control">
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="align-middle text-center text-sm">
-                                                        <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">Impostos</label>
-                                                            <input type="text" class="form-control">
-                                                        </div>
-                                                    </td>
-                                                    <td class="align-middle text-center text-sm">
-                                                        <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">Lucro Líquido</label>
-                                                            <input type="text" class="form-control">
-                                                        </div>
-                                                    </td>
-                                                    <td class="align-middle text-center text-sm">
-                                                        <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">Caixa</label>
-                                                            <input type="text" class="form-control">
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="align-middle text-center text-sm">
-                                                        <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">Dívida</label>
-                                                            <input type="text" class="form-control">
-                                                        </div>
-                                                    </td>
-                                                    <td class="align-middle text-center text-sm">
-                                                        <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">FCO</label>
-                                                            <input type="text" class="form-control">
-                                                        </div>
-                                                    </td>
-                                                    <td class="align-middle text-center text-sm">
-                                                        <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">FCI</label>
-                                                            <input type="text" class="form-control">
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="align-middle text-center text-sm">
-                                                        <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">CAPEX</label>
-                                                            <input type="text" class="form-control">
-                                                        </div>
-                                                    </td>
-                                                    <td class="align-middle text-center text-sm">
-                                                        <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">FCF</label>
-                                                            <input type="text" class="form-control">
-                                                        </div>
-                                                    </td>
-                                                    <td class="align-middle text-center text-sm">
-                                                        <div class="input-group input-group-outline mb-3">
-                                                            <label class="form-label">Pagamento de Div. e JSCP</label>
-                                                            <input type="text" class="form-control">
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td class="buttons-tables">
-                                                        <a href="/"><button class="btn bg-gradient-cancelar w-100 mb-0 toast-btn"
-                                                            type="button" data-target="successToast">Cancelar</button></a>
-                                                        <button class="btn bg-gradient-salvar w-100 mb-0 toast-btn"
-                                                            type="button" data-target="successToast">Salvar</button>
-                                                    </td>
-                                                    <td></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </form>    
-                                </div>
+                        </div>
+                        <div class="card-body px-0 pb-2">
+                            <div class="table-responsive p-0">
+                                <form action="<%= action %>" method="POST">
+                                    <table class="table align-items-center mb-0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="align-middle text-center text-sm">
+                                                    <div class="input-group input-group-outline mb-3">
+                                                        <label class="form-label">Código</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    <div class="input-group input-group-outline mb-3">
+                                                        <label class="form-label">Empresa</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    <div class="input-group input-group-outline mb-3">
+                                                        <label class="form-label">CNPJ</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="align-middle text-center text-sm">
+                                                    <div class="input-group input-group-outline mb-3">
+                                                        <label class="form-label">Telefone</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    <div class="input-group input-group-outline mb-3">
+                                                        <label class="form-label">Email</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    <div class="input-group input-group-outline mb-3">
+                                                        <label class="form-label">Patrimônio Líquido</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="align-middle text-center text-sm">
+                                                    <div class="input-group input-group-outline mb-3">
+                                                        <label class="form-label">Receita Líquida</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    <div class="input-group input-group-outline mb-3">
+                                                        <label class="form-label">Lucro Bruto</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    <div class="input-group input-group-outline mb-3">
+                                                        <label class="form-label">Despesas (VGA)</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="align-middle text-center text-sm">
+                                                    <div class="input-group input-group-outline mb-3">
+                                                        <label class="form-label">PD&I</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    <div class="input-group input-group-outline mb-3">
+                                                        <label class="form-label">Despesas Financeira</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    <div class="input-group input-group-outline mb-3">
+                                                        <label class="form-label">Resultado antes dos Impostos</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="align-middle text-center text-sm">
+                                                    <div class="input-group input-group-outline mb-3">
+                                                        <label class="form-label">Impostos</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    <div class="input-group input-group-outline mb-3">
+                                                        <label class="form-label">Lucro Líquido</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    <div class="input-group input-group-outline mb-3">
+                                                        <label class="form-label">Caixa</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="align-middle text-center text-sm">
+                                                    <div class="input-group input-group-outline mb-3">
+                                                        <label class="form-label">Dívida</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    <div class="input-group input-group-outline mb-3">
+                                                        <label class="form-label">FCO</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    <div class="input-group input-group-outline mb-3">
+                                                        <label class="form-label">FCI</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="align-middle text-center text-sm">
+                                                    <div class="input-group input-group-outline mb-3">
+                                                        <label class="form-label">CAPEX</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    <div class="input-group input-group-outline mb-3">
+                                                        <label class="form-label">FCF</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    <div class="input-group input-group-outline mb-3">
+                                                        <label class="form-label">Pagamento de Div. e JSCP</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td class="buttons-tables">
+                                                    <a href="/"><button
+                                                            class="btn bg-gradient-cancelar w-100 mb-0 toast-btn"
+                                                            type="button"
+                                                            data-target="successToast">Cancelar</button></a>
+                                                    <button class="btn bg-gradient-salvar w-100 mb-0 toast-btn"
+                                                        type="button" data-target="successToast">Salvar</button>
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
-                <footer class="footer py-4  ">
-                    <div class="container-fluid">
-                        <div class="row align-items-center justify-content-lg-between">
-                            <div class="col-lg-6 mb-lg-0 mb-4">
-                                <div class="copyright text-center text-sm text-muted text-lg-start">
-                                    ©
-                                    <script>
-                                        document.write(new Date().getFullYear())
-                                    </script>,
-                                    made with <i class="fa fa-heart"></i> by Androidos.
-                                </div>
+            </div>
+            <footer class="footer py-4  ">
+                <div class="container-fluid">
+                    <div class="row align-items-center justify-content-lg-between">
+                        <div class="col-lg-6 mb-lg-0 mb-4">
+                            <div class="copyright text-center text-sm text-muted text-lg-start">
+                                ©
+                                <script>
+                                    document.write(new Date().getFullYear())
+                                </script>,
+                                made with <i class="fa fa-heart"></i> by Androidos.
                             </div>
                         </div>
                     </div>
-                </footer>
-            </div>
+                </div>
+            </footer>
+        </div>
     </main>
     <!--   Core JS Files   -->
     <script src="/public/javascripts/core/popper.min.js"></script>

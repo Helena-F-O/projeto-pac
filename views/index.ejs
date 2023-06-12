@@ -59,7 +59,7 @@
         <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link text-white active bg-gradient-primary" href="/principal">
+                    <a class="nav-link text-white active bg-gradient-primary" href="/">
                         <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="material-icons opacity-10">table_view</i>
                         </div>
@@ -107,7 +107,7 @@
                             <div class="table-responsive p-0">
                                 <table class="table align-items-center mb-0">
                                     <thead>
-                                        
+
                                         <tr>
                                             <th
                                                 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
@@ -120,46 +120,59 @@
                                                 Ações</th>
                                         </tr>
                                     </thead>
-                                    <% if(!results || results.length == 0) { %>
+                                    <% if(!results || results.length==0) { %>
                                         <tbody>
                                             <tr>
                                                 <td class="text-center table-empresas-cadastradas-cnpj">
-                                                    <p class="text-xs text-secondary mb-0">Você não possui nenhuma loja cadastrada! Cadastre para que possamos exibir aqui!</p>
+                                                    <p class="text-xs text-secondary mb-0">Você não possui nenhuma loja
+                                                        cadastrada! Cadastre para que possamos exibir aqui!</p>
                                                 </td>
                                             </tr>
                                         </tbody>
-                                    <tbody>
-                                        <% } else { %><% results.forEach( function(empresa){ %>
-                                        <tr>
-                                            <td class="text-center table-empresas-cadastradas-nome">
-                                                <div class="d-flex px-2 py-1">
-                                                    <div class="d-flex flex-column justify-content-center">
-                                                        <h6 class="mb-0 text-sm"><%= empresa.nome %></h6>
-                                                        <p class="text-xs text-secondary mb-0"><%= empresa.email %></p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="text-center table-empresas-cadastradas-cnpj">
-                                                <p class="text-xs text-secondary mb-0"><%= empresa.cnpj %></p>
-                                            </td>
-                                            <td class="buttons-tables">
-                                                <a href="/editar"><button class="btn bg-gradient-editar w-100 mb-0 toast-btn"
-                                                    type="button" data-target="successToast">Editar</button></a>
-                                                <a><button class="btn bg-gradient-excluir w-100 mb-0 toast-btn"
-                                                    type="button" data-target="successToast">Excluir</button></a>
-                                                <a href="/dash"><button class="btn bg-gradient-excluir w-100 mb-0 toast-btn"
-                                                    type="button" data-target="successToast">Dashboard</button></a>
-                                            </td>
-                                        </tr>
-                                        <% })} %>
-                                    </tbody>
+                                        <tbody>
+                                            <% } else { %>
+                                                <% results.forEach( function(empresa){ %>
+                                                    <tr>
+                                                        <td class="text-center table-empresas-cadastradas-nome">
+                                                            <div class="d-flex px-2 py-1">
+                                                                <div class="d-flex flex-column justify-content-center">
+                                                                    <h6 class="mb-0 text-sm">
+                                                                        <%= empresa.nome %>
+                                                                    </h6>
+                                                                    <p class="text-xs text-secondary mb-0">
+                                                                        <%= empresa.email %>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-center table-empresas-cadastradas-cnpj">
+                                                            <p class="text-xs text-secondary mb-0">
+                                                                <%= empresa.cnpj %>
+                                                            </p>
+                                                        </td>
+                                                        <td class="buttons-tables">
+                                                            <a href="/editar"><button
+                                                                    class="btn bg-gradient-editar w-100 mb-0 toast-btn"
+                                                                    type="button" data-target="successToast">Editar</button></a>
+                                                            <a><button
+                                                                    class="btn bg-gradient-excluir w-100 mb-0 toast-btn"
+                                                                    type="button" data-target="successToast"
+                                                                    data-id="<%= empresa.id_empresa %>">Excluir</button></a>
+                                                            <a href="/dash"><button
+                                                                    class="btn bg-gradient-excluir w-100 mb-0 toast-btn"
+                                                                    type="button" data-target="successToast"
+                                                                    data-id="<%= empresa.id_empresa %>">Dashboard</button></a>
+                                                        </td>
+                                                    </tr>
+                                                    <% })} %>
+                                        </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-          </tbody>
+            </tbody>
             <footer class="footer py-4  ">
                 <div class="container-fluid">
                     <div class="row align-items-center justify-content-lg-between">
@@ -177,6 +190,18 @@
             </footer>
         </div>
     </main>
+    <!-- botão editar-->
+    <script>
+        const editarBtns = document.querySelectorAll('.editar-btn');
+
+        editarBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const idLoja = btn.getAttribute('data-id');
+                window.location.href = `/editar/${idLoja}`;
+            });
+        });
+    </script>
+
     <!--   Core JS Files   -->
     <script src="/public/javascripts/core/popper.min.js"></script>
     <script src="/public/javascripts/core/bootstrap.min.js"></script>

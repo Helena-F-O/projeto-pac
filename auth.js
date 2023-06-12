@@ -29,13 +29,6 @@ passport.use(
   })
 );
 
-function ensureAuthenticated(req, res, next) {
-  if (req.isAuthenticated()) {
-    return next();
-  }
-  res.redirect('/login'); // Redireciona para a página de login se o usuário não estiver autenticado
-}
-
 passport.serializeUser((user, done) => {
   done(null, user.id_usuario);
 });
@@ -56,4 +49,4 @@ passport.deserializeUser(async (id, done) => {
   }
 });
 
-module.exports = {passport, ensureAuthenticated};
+module.exports = passport;
