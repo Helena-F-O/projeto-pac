@@ -55,7 +55,11 @@ router.get('/excluir', function(req, res, next) {
 /* ->  ------------------------------------------------------------------------------------------------------*/
 
 /*DASH ->  ------------------------------------------------------------------------------------------------------*/
-router.get('/dash', async function (req, res) { 
+router.get('/dash', function(req, res, next) {
+  res.render('dash', { title: "Dasboard", action: "/dash" })
+})
+
+/*router.get('/dash', async function (req, res) { 
   try { 
     const MLucBruRecLiq = await global.db.MLucBruRecLiq();
     console.log(results);
@@ -63,7 +67,7 @@ router.get('/dash', async function (req, res) {
   } catch (error) { 
     res.redirect('/?erro=' + error);
   } 
-})
+})*/
 /* ->  ------------------------------------------------------------------------------------------------------*/
 
 
