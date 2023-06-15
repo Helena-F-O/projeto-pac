@@ -15,6 +15,12 @@ async function connect() {
     return global.connection; 
 } 
 
+async function selectCountEmpresas() { 
+  const conn = await connect(); 
+  const [rows] = await conn.query('SELECT COUNT(*) FROM empresas;'); 
+  return rows;
+} 
+
 async function selectEmpresas() { 
     const conn = await connect(); 
     const [rows] = await conn.query('SELECT * FROM empresas;'); 
@@ -399,4 +405,4 @@ async function TribRend(num1, num2) {
 
 connect(); 
 
-module.exports = { selectEmpresas, selectUsuarios, insertEmpresas, insertUsuarios, MLucBruRecLiq, MPDLucBru, MDALucBru, EBITDA, EBITDARecLiq, EBIT, EBITRecLiq, DespEBIT, MLucAntImp, MLucLiqRec, ROE, DivLiqEBITIDA, FCT, FCLCAPEX, CapexFCO, CapexDA, CapexLucLiq, Payout, TribRec, TribRend}
+module.exports = { selectCountEmpresas, selectEmpresas, selectUsuarios, insertEmpresas, insertUsuarios, MLucBruRecLiq, MPDLucBru, MDALucBru, EBITDA, EBITDARecLiq, EBIT, EBITRecLiq, DespEBIT, MLucAntImp, MLucLiqRec, ROE, DivLiqEBITIDA, FCT, FCLCAPEX, CapexFCO, CapexDA, CapexLucLiq, Payout, TribRec, TribRend}

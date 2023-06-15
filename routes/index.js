@@ -21,8 +21,10 @@ router.get('/', async function (req, res) {
 router.get('/perfil', async function (req, res) { 
   try { 
     const results = await global.db.selectUsuarios();
+    const contEmpresas = await global.db.selectCountEmpresas();
     console.log(results);
-     res.render('perfil', { results });
+    console.log(contEmpresas);
+    res.render('perfil', { results, contEmpresas });
   } catch (error) { 
     res.redirect('/?erro=' + error);
   } 
