@@ -32,20 +32,20 @@ router.get('/perfil', async function (req, res) {
 /* ->  ------------------------------------------------------------------------------------------------------*/
 
 /*EDIT ->  ------------------------------------------------------------------------------------------------------*/
-router.get('/editar', function(req, res, next) {
+/*router.get('/editar', function(req, res, next) {
   res.render('editar', { title: "Editar Empresa", action: "/editar" })
-})
+})*/
 
-/*// Rota para exibir os dados da loja
+// Rota para exibir os dados da loja
 router.get('/editar', async function (req, res) { 
   try { 
     const results = await global.db.selectEmpresas();
     console.log(results);
-     res.render('index', { results });
+     res.render('editar', { results });
   } catch (error) { 
     res.redirect('/?erro=' + error);
   } 
-})*/
+})
 
 
 /* ->  ------------------------------------------------------------------------------------------------------*/
@@ -57,22 +57,53 @@ router.get('/excluir', function(req, res, next) {
 /* ->  ------------------------------------------------------------------------------------------------------*/
 
 /*DASH ->  ------------------------------------------------------------------------------------------------------*/
-router.get('/dash', function(req, res, next) {
-  res.render('dash', { title: "Dasboard", action: "/dash" })
+router.get('/dash', async function (req, res) { 
+  try { 
+    const results = await global.db.selectEmpresas();
+    console.log(results);
+     res.render('dash', { results });
+  } catch (error) { 
+    res.redirect('/?erro=' + error);
+  } 
 })
 
 /*router.get('/dash', async function (req, res) { 
   try { 
-    const MLucBruRecLiq = await global.db.MLucBruRecLiq();
+    const results = await global.db.selectEmpresas();
     console.log(results);
-     res.render('dash', { MLucBruRecLiq });
+
+    const margem_rentabilidade = results[0].lucro_bruto/results[0].receita_liquida;
+    const margem_custos_pesquisa_desenvolvimento = results[0].pdi/results[0].lucro_bruto;
+    const margem_custos_depreciação_amortização = results[0].da/results[0].lucro_bruto;
+
+    const EBITDA = results[0].lucro_liquido-results[0].impostos-results[0].despesas_financeiras-results[0].da;
+    const EBIT = results[0].lucro_liquido-results[0].impostos-results[0].despesas_financeiras;
+
+    const margem_medida_EBITDA = EBITDA/results[0].receita_liquida;
+    const margem_receita_total_lucro_operacional = EBIT/results[0].receita_liquida;
+    const cobetura_juros = results[0].despesas_financeiras/EBIT;
+    
+    const margem_lucro_antes_impostos = results[0].resultado_antes_impostos/ results[0].receita_liquida;
+    const margem_rentabilidade_liquida = results[0].lucro_liquido/ results[0].receita_liquida;
+    const carga_tributária = results[0].impostos/results[0].receita_liquida;
+    const indice_carga_tributária = results[0].impostos/results[0].resultado_antes_impostos;
+    
+    const ROE = results[0].lucro_liquido/results[0].patrimonio_liquido;
+    const payout = results[0].pagamento_div_jscp/results[0].lucro_liquido;
+    
+   
+    const valor_divida_EBITDA = (results[0].divida-results[0].caixa)/EBITDA;
+    const FCT = results[0].fco+results[0].fci+results[0].fcf;
+    const FCL_CAPEX = results[0].fco+results[0].capex;
+    const proporção_investimentos = results[0].capex/results[0].fco;
+    const crescimento_empresa = results[0].capex/results[0].da;
+    const gasto_capital = results[0].capex/results[0].lucro_liquido;
+
+    res.render('dash', { results, crescimento_empresa, proporção_investimentos, FCL_CAPEX, FCT, valor_divida_EBITDA, payout, ROE, indice_carga_tributária, carga_tributária, margem_rentabilidade_liquida, margem_lucro_antes_impostos, cobetura_juros, margem_receita_total_lucro_operacional, margem_medida_EBITDA, margem_custos_depreciação_amortização, margem_custos_pesquisa_desenvolvimento, margem_rentabilidade, gasto_capital, EBIT, EBITDA });
   } catch (error) { 
     res.redirect('/?erro=' + error);
   } 
 })*/
-/* ->  ------------------------------------------------------------------------------------------------------*/
-
-
 
 /*SINGIN ->  ------------------------------------------------------------------------------------------------------*/
 router.get('/singin', function(req, res, next) {

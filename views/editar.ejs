@@ -106,146 +106,149 @@
                         </div>
                         <div class="card-body px-0 pb-2">
                             <div class="table-responsive p-0">
-                                <form action="<%= action %>" method="POST">
+                                <form action="" method="GET">
+                                    <% if(!results || results.length==0) { %>
+                                            <% } else { %>
+                                                <% results.forEach( function(empresa){ %>
                                     <table class="table align-items-center mb-0">
                                         <tbody>
                                             <tr>
                                                 <td class="align-middle text-center text-sm">
-                                                    <div class="input-group input-group-outline mb-3">
+                                                    <div class="input-group input-group-outline mb-3 focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused">
                                                         <label class="form-label">Código</label>
-                                                        <input type="text" class="form-control">
+                                                        <input type="text" class="form-control" value="<%= empresa.id_empresa %>">
                                                     </div>
                                                 </td>
                                                 <td class="align-middle text-center text-sm">
-                                                    <div class="input-group input-group-outline mb-3">
+                                                    <div class="input-group input-group-outline mb-3 focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused">
                                                         <label class="form-label">Empresa</label>
-                                                        <input type="text" class="form-control">
+                                                        <input type="text" class="form-control" value="<%= empresa.nome %>">
                                                     </div>
                                                 </td>
                                                 <td class="align-middle text-center text-sm">
-                                                    <div class="input-group input-group-outline mb-3">
+                                                    <div class="input-group input-group-outline mb-3 focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused">
                                                         <label class="form-label">CNPJ</label>
-                                                        <input type="text" class="form-control">
+                                                        <input type="text" class="form-control"  value="<%= empresa.cnpj %>">
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td class="align-middle text-center text-sm">
-                                                    <div class="input-group input-group-outline mb-3">
+                                                    <div class="input-group input-group-outline mb-3 focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused">
                                                         <label class="form-label">Telefone</label>
-                                                        <input type="text" class="form-control">
+                                                        <input type="text" class="form-control" value="<%= empresa.telefone %>">
                                                     </div>
                                                 </td>
                                                 <td class="align-middle text-center text-sm">
-                                                    <div class="input-group input-group-outline mb-3">
+                                                    <div class="input-group input-group-outline mb-3 focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused">
                                                         <label class="form-label">Email</label>
-                                                        <input type="text" class="form-control">
+                                                        <input type="text" class="form-control" value="<%= empresa.email %>">
                                                     </div>
                                                 </td>
                                                 <td class="align-middle text-center text-sm">
-                                                    <div class="input-group input-group-outline mb-3">
+                                                    <div class="input-group input-group-outline mb-3 focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused">
                                                         <label class="form-label">Patrimônio Líquido</label>
-                                                        <input type="text" class="form-control">
+                                                        <input type="text" class="form-control" value="<%= empresa.patrimonio_liquido %>">
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td class="align-middle text-center text-sm">
-                                                    <div class="input-group input-group-outline mb-3">
+                                                    <div class="input-group input-group-outline mb-3 focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused">
                                                         <label class="form-label">Receita Líquida</label>
-                                                        <input type="text" class="form-control">
+                                                        <input type="text" class="form-control" value="<%= empresa.receita_liquida %>">
                                                     </div>
                                                 </td>
                                                 <td class="align-middle text-center text-sm">
-                                                    <div class="input-group input-group-outline mb-3">
+                                                    <div class="input-group input-group-outline mb-3 focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused">
                                                         <label class="form-label">Lucro Bruto</label>
-                                                        <input type="text" class="form-control">
+                                                        <input type="text" class="form-control" value="<%= empresa.lucro_bruto %>">
                                                     </div>
                                                 </td>
                                                 <td class="align-middle text-center text-sm">
-                                                    <div class="input-group input-group-outline mb-3">
+                                                    <div class="input-group input-group-outline mb-3 focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused">
                                                         <label class="form-label">Despesas (VGA)</label>
-                                                        <input type="text" class="form-control">
+                                                        <input type="text" class="form-control" value="<%= empresa.despesas_vga %>">
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td class="align-middle text-center text-sm">
-                                                    <div class="input-group input-group-outline mb-3">
+                                                    <div class="input-group input-group-outline mb-3 focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused">
                                                         <label class="form-label">PD&I</label>
-                                                        <input type="text" class="form-control">
+                                                        <input type="text" class="form-control" value="<%= empresa.pdi %>">
                                                     </div>
                                                 </td>
                                                 <td class="align-middle text-center text-sm">
-                                                    <div class="input-group input-group-outline mb-3">
-                                                        <label class="form-label">Despesas Financeira</label>
-                                                        <input type="text" class="form-control">
+                                                    <div class="input-group input-group-outline mb-3 focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused">
+                                                        <label class="form-label">DA</label>
+                                                        <input type="text" class="form-control" value="<%= empresa.da %>">
                                                     </div>
                                                 </td>
                                                 <td class="align-middle text-center text-sm">
-                                                    <div class="input-group input-group-outline mb-3">
+                                                    <div class="input-group input-group-outline mb-3 focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused">
                                                         <label class="form-label">Resultado antes dos Impostos</label>
-                                                        <input type="text" class="form-control">
+                                                        <input type="text" class="form-control" value="<%= empresa.resultado_antes_impostos %>">
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td class="align-middle text-center text-sm">
-                                                    <div class="input-group input-group-outline mb-3">
+                                                    <div class="input-group input-group-outline mb-3 focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused">
                                                         <label class="form-label">Impostos</label>
-                                                        <input type="text" class="form-control">
+                                                        <input type="text" class="form-control" value="<%= empresa.impostos %>">
                                                     </div>
                                                 </td>
                                                 <td class="align-middle text-center text-sm">
-                                                    <div class="input-group input-group-outline mb-3">
+                                                    <div class="input-group input-group-outline mb-3 focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused">
                                                         <label class="form-label">Lucro Líquido</label>
-                                                        <input type="text" class="form-control">
+                                                        <input type="text" class="form-control" value="<%= empresa.lucro_liquido %>">
                                                     </div>
                                                 </td>
                                                 <td class="align-middle text-center text-sm">
-                                                    <div class="input-group input-group-outline mb-3">
+                                                    <div class="input-group input-group-outline mb-3 focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused">
                                                         <label class="form-label">Caixa</label>
-                                                        <input type="text" class="form-control">
+                                                        <input type="text" class="form-control" value="<%= empresa.caixa %>">
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td class="align-middle text-center text-sm">
-                                                    <div class="input-group input-group-outline mb-3">
+                                                    <div class="input-group input-group-outline mb-3 focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused">
                                                         <label class="form-label">Dívida</label>
-                                                        <input type="text" class="form-control">
+                                                        <input type="text" class="form-control" value="<%= empresa.divida %>">
                                                     </div>
                                                 </td>
                                                 <td class="align-middle text-center text-sm">
-                                                    <div class="input-group input-group-outline mb-3">
+                                                    <div class="input-group input-group-outline mb-3 focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused">
                                                         <label class="form-label">FCO</label>
-                                                        <input type="text" class="form-control">
+                                                        <input type="text" class="form-control" value="<%= empresa.fco %>">
                                                     </div>
                                                 </td>
                                                 <td class="align-middle text-center text-sm">
-                                                    <div class="input-group input-group-outline mb-3">
+                                                    <div class="input-group input-group-outline mb-3 focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused">
                                                         <label class="form-label">FCI</label>
-                                                        <input type="text" class="form-control">
+                                                        <input type="text" class="form-control" value="<%= empresa.fci %>">
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td class="align-middle text-center text-sm">
-                                                    <div class="input-group input-group-outline mb-3">
+                                                    <div class="input-group input-group-outline mb-3 focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused">
                                                         <label class="form-label">CAPEX</label>
-                                                        <input type="text" class="form-control">
+                                                        <input type="text" class="form-control" value="<%= empresa.capex %>">
                                                     </div>
                                                 </td>
                                                 <td class="align-middle text-center text-sm">
-                                                    <div class="input-group input-group-outline mb-3">
+                                                    <div class="input-group input-group-outline mb-3 focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused">
                                                         <label class="form-label">FCF</label>
-                                                        <input type="text" class="form-control">
+                                                        <input type="text" class="form-control" value="<%= empresa.fcf %>">
                                                     </div>
                                                 </td>
                                                 <td class="align-middle text-center text-sm">
-                                                    <div class="input-group input-group-outline mb-3">
+                                                    <div class="input-group input-group-outline mb-3 focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused focused is-focused">
                                                         <label class="form-label">Pagamento de Div. e JSCP</label>
-                                                        <input type="text" class="form-control">
+                                                        <input type="text" class="form-control" value="<%= empresa.pagamento_div_jscp %>">
                                                     </div>
                                                 </td>
                                             </tr>
@@ -263,6 +266,7 @@
                                             </tr>
                                         </tbody>
                                     </table>
+                                    <% })} %>
                                 </form>
                             </div>
                         </div>
