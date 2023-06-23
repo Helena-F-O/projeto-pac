@@ -106,7 +106,7 @@
                         </div>
                         <div class="card-body px-0 pb-2">
                             <div class="table-responsive p-0">
-                                <form action="" method="GET">
+                                <form action="/editar" method="post">
                                     <% if(!results || results.length==0) { %>
                                             <% } else { %>
                                                 <% results.forEach( function(empresa){ %>
@@ -260,7 +260,7 @@
                                                             type="button"
                                                             data-target="successToast">Cancelar</button></a>
                                                     <button class="btn bg-gradient-salvar w-100 mb-0 toast-btn"
-                                                        type="button" data-target="successToast">Salvar</button>
+                                                        type="submit" data-target="successToast">Salvar</button>
                                                 </td>
                                                 <td></td>
                                             </tr>

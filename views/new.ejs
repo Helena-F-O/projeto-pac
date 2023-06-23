@@ -106,7 +106,7 @@
                             </div>
                             <div class="card-body px-0 pb-2">
                                 <div class="table-responsive p-0">
-                                    <form action="<%= action %>" method="POST"></form>
+                                    <form action="/new" method="POST">
                                         <table class="table align-items-center mb-0">
                                             <tbody>
                                                 <tr>
@@ -254,8 +254,8 @@
                                                     <td class="buttons-tables">
                                                         <a href="/"><button class="btn bg-gradient-cancelar w-100 mb-0 toast-btn"
                                                             type="button" data-target="successToast">Cancelar</button></a>
-                                                        <button class="btn bg-gradient-salvar w-100 mb-0 toast-btn"
-                                                            type="button" data-target="successToast">Salvar</button>
+                                                        <a href="/new"><button class="btn bg-gradient-salvar w-100 mb-0 toast-btn"
+                                                            type="submit" data-target="successToast">Salvar</button>
                                                     </td>
                                                     <td></td>
                                                 </tr>

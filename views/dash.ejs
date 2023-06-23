@@ -126,13 +126,13 @@
                 <i class="material-icons opacity-10">account_balance</i>
               </div>
               <div class="text-end pt-1">
-                <p class="text-sm mb-0 text-capitalize">EBITDA</p>
-                <h4 class="mb-0">R$<%= empresa.nome %>></h4>
+                <p class="text-sm mb-0 text-capitalize">BI</p>
+                <h4 class="mb-0">R$<%= EBITDA %></h4>
               </div>
             </div>
             <hr class="dark horizontal my-0">
             <div class="card-footer p-3">
-              <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+55% </span>than last week</p>
+              <p class="mb-0"><span class="text-success text-sm font-weight-bolder"></span>EBITDA</p>
             </div>
           </div>
         </div>
@@ -143,13 +143,13 @@
                 <i class="material-icons opacity-10">attach_money</i>
               </div>
               <div class="text-end pt-1">
-                <p class="text-sm mb-0 text-capitalize">EBIT</p>
-                <h4 class="mb-0">2,300</h4>
+                <p class="text-sm mb-0 text-capitalize">BI</p>
+                <h4 class="mb-0">R$<%= EBIT %></h4>
               </div>
             </div>
             <hr class="dark horizontal my-0">
             <div class="card-footer p-3">
-              <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+3% </span>than last month</p>
+              <p class="mb-0"><span class="text-success text-sm font-weight-bolder"> </span>EBIT</p>
             </div>
           </div>
         </div>
@@ -160,13 +160,13 @@
                 <i class="material-icons opacity-10">credit_card</i>
               </div>
               <div class="text-end pt-1">
-                <p class="text-sm mb-0 text-capitalize">Valor Divida de EBITDA</p>
-                <h4 class="mb-0">3,462</h4>
+                <p class="text-sm mb-0 text-capitalize">BI</p>
+                <h4 class="mb-0">R$<%= fluxo_caixa_livre %></h4>
               </div>
             </div>
             <hr class="dark horizontal my-0">
             <div class="card-footer p-3">
-              <p class="mb-0"><span class="text-danger text-sm font-weight-bolder">-2%</span> than yesterday</p>
+              <p class="mb-0"><span class="text-danger text-sm font-weight-bolder"> </span>Fluxo de Caixa Livre</p>
             </div>
           </div>
         </div>
@@ -177,13 +177,13 @@
                 <i class="material-icons opacity-10">receipt</i>
               </div>
               <div class="text-end pt-1">
-                <p class="text-sm mb-0 text-capitalize">FCT</p>
-                <h4 class="mb-0">$103,430</h4>
+                <p class="text-sm mb-0 text-capitalize">BI</p>
+                <h4 class="mb-0">R$<%= FCT %></h4>
               </div>
             </div>
             <hr class="dark horizontal my-0">
             <div class="card-footer p-3">
-              <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+5% </span>than yesterday</p>
+              <p class="mb-0"><span class="text-success text-sm font-weight-bolder"> </span>FCT</p>
             </div>
           </div>
         </div>
@@ -204,11 +204,6 @@
                 Medida de Rentabilidade <br>
                 Custos de Pesquisa e Desenvolvimento<br>
                 Custos de Depreciação e Amortização</p>
-              <hr class="dark horizontal">
-              <div class="d-flex ">
-                <i class="material-icons text-sm my-auto me-1">schedule</i>
-                <p class="mb-0 text-sm"> Dados bons </p>
-              </div>
             </div>
           </div>
         </div>
@@ -227,11 +222,6 @@
                 Medida de EBITDA<br>
                 Receita Total em Lucro Operacional<br>
                 Cobetura de Juros</p>
-              <hr class="dark horizontal">
-              <div class="d-flex ">
-                <i class="material-icons text-sm my-auto me-1">schedule</i>
-                <p class="mb-0 text-sm"> Dados ruins </p>
-              </div>
             </div>
           </div>
         </div>
@@ -252,11 +242,6 @@
                 Carga Tributária<br>
                 Indice de Carga Tributária
               </p>
-              <hr class="dark horizontal">
-              <div class="d-flex ">
-                <i class="material-icons text-sm my-auto me-1">schedule</i>
-                <p class="mb-0 text-sm">Na risca</p>
-              </div>
             </div>
           </div>
         </div>
@@ -267,23 +252,7 @@
             <div class="card-header pb-0">
               <div class="row">
                 <div class="col-lg-6 col-7">
-                  <h6>Projects</h6>
-                  <p class="text-sm mb-0">
-                    <i class="fa fa-check text-info" aria-hidden="true"></i>
-                    <span class="font-weight-bold ms-1">30 done</span> this month
-                  </p>
-                </div>
-                <div class="col-lg-6 col-5 my-auto text-end">
-                  <div class="dropdown float-lg-end pe-4">
-                    <a class="cursor-pointer" id="dropdownTable" data-bs-toggle="dropdown" aria-expanded="false">
-                      <i class="fa fa-ellipsis-v text-secondary"></i>
-                    </a>
-                    <ul class="dropdown-menu px-2 py-3 ms-sm-n4 ms-n5" aria-labelledby="dropdownTable">
-                      <li><a class="dropdown-item border-radius-md" href="javascript:;">Action</a></li>
-                      <li><a class="dropdown-item border-radius-md" href="javascript:;">Another action</a></li>
-                      <li><a class="dropdown-item border-radius-md" href="javascript:;">Something else here</a></li>
-                    </ul>
-                  </div>
+                  <h6>Outros Indices de sua Empresa</h6>
                 </div>
               </div>
             </div>
@@ -292,8 +261,8 @@
                 <table class="table align-items-center mb-0">
                   <thead>
                     <tr>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Companies</th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Members</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Indicadores</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Valores</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -304,12 +273,12 @@
                             <img src="/public/images/small-logos/documento.png" class="avatar avatar-sm me-3" alt="xd">
                           </div>
                           <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">FCL CAPEX</h6>
+                            <h6 class="mb-0 text-sm">Valor da Divida de EBITDA</h6>
                           </div>
                         </div>
                       </td>
                       <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> $14,000 </span>
+                        <span class="text-xs font-weight-bold"> <%= valor_divida_EBITDA %> </span>
                       </td>
                     </tr>
                     <tr>
@@ -324,7 +293,7 @@
                         </div>
                       </td>
                       <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> $3,000 </span>
+                        <span class="text-xs font-weight-bold"> <%= proporção_investimentos %> </span>
                       </td>
                     </tr>
                     <tr>
@@ -339,7 +308,7 @@
                         </div>
                       </td>
                       <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> Not set </span>
+                        <span class="text-xs font-weight-bold"> <%= crescimento_empresa %> </span>
                       </td>
                     </tr>
                     <tr>
@@ -353,8 +322,17 @@
                           </div>
                         </div>
                       </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"> $20,500 </span>
+                      <td class="align-middle">
+                        <div class="progress-wrapper w-75 mx-auto">
+                          <div class="progress-info">
+                            <div class="progress-percentage">
+                              <span class="text-xs font-weight-bold"><%= gasto_capital %>%</span>
+                            </div>
+                          </div>
+                          <div class="progress">
+                            <div class="progress-bar bg-gradient-info w-<%= gasto_capital %>" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="25"></div>
+                          </div>
+                        </div>
                       </td>
                     </tr>
                     <tr>
@@ -372,11 +350,11 @@
                         <div class="progress-wrapper w-75 mx-auto">
                           <div class="progress-info">
                             <div class="progress-percentage">
-                              <span class="text-xs font-weight-bold">25%</span>
+                              <span class="text-xs font-weight-bold"><%= ROE %>%</span>
                             </div>
                           </div>
                           <div class="progress">
-                            <div class="progress-bar bg-gradient-info w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="25"></div>
+                            <div class="progress-bar bg-gradient-info w-<%= ROE %>" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="25"></div>
                           </div>
                         </div>
                       </td>
@@ -396,11 +374,11 @@
                         <div class="progress-wrapper w-75 mx-auto">
                           <div class="progress-info">
                             <div class="progress-percentage">
-                              <span class="text-xs font-weight-bold">40%</span>
+                              <span class="text-xs font-weight-bold"><%= payout %>%</span>
                             </div>
                           </div>
                           <div class="progress">
-                            <div class="progress-bar bg-gradient-info w-40" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="40"></div>
+                            <div class="progress-bar bg-gradient-info w-<%= payout %>" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="40"></div>
                           </div>
                         </div>
                       </td>
@@ -447,80 +425,6 @@
       </footer>
     </div>
   </main>
-  <div class="fixed-plugin">
-    <a class="fixed-plugin-button text-dark position-fixed px-3 py-2">
-      <i class="material-icons py-2">settings</i>
-    </a>
-    <div class="card shadow-lg">
-      <div class="card-header pb-0 pt-3">
-        <div class="float-start">
-          <h5 class="mt-3 mb-0">Material UI Configurator</h5>
-          <p>See our dashboard options.</p>
-        </div>
-        <div class="float-end mt-4">
-          <button class="btn btn-link text-dark p-0 fixed-plugin-close-button">
-            <i class="material-icons">clear</i>
-          </button>
-        </div>
-        <!-- End Toggle Button -->
-      </div>
-      <hr class="horizontal dark my-1">
-      <div class="card-body pt-sm-3 pt-0">
-        <!-- Sidebar Backgrounds -->
-        <div>
-          <h6 class="mb-0">Sidebar Colors</h6>
-        </div>
-        <a href="javascript:void(0)" class="switch-trigger background-color">
-          <div class="badge-colors my-2 text-start">
-            <span class="badge filter bg-gradient-primary active" data-color="primary" onclick="sidebarColor(this)"></span>
-            <span class="badge filter bg-gradient-dark" data-color="dark" onclick="sidebarColor(this)"></span>
-            <span class="badge filter bg-gradient-info" data-color="info" onclick="sidebarColor(this)"></span>
-            <span class="badge filter bg-gradient-success" data-color="success" onclick="sidebarColor(this)"></span>
-            <span class="badge filter bg-gradient-warning" data-color="warning" onclick="sidebarColor(this)"></span>
-            <span class="badge filter bg-gradient-danger" data-color="danger" onclick="sidebarColor(this)"></span>
-          </div>
-        </a>
-        <!-- Sidenav Type -->
-        <div class="mt-3">
-          <h6 class="mb-0">Sidenav Type</h6>
-          <p class="text-sm">Choose between 2 different sidenav types.</p>
-        </div>
-        <div class="d-flex">
-          <button class="btn bg-gradient-dark px-3 mb-2 active" data-class="bg-gradient-dark" onclick="sidebarType(this)">Dark</button>
-          <button class="btn bg-gradient-dark px-3 mb-2 ms-2" data-class="bg-transparent" onclick="sidebarType(this)">Transparent</button>
-          <button class="btn bg-gradient-dark px-3 mb-2 ms-2" data-class="bg-white" onclick="sidebarType(this)">White</button>
-        </div>
-        <p class="text-sm d-xl-none d-block mt-2">You can change the sidenav type just on desktop view.</p>
-        <!-- Navbar Fixed -->
-        <div class="mt-3 d-flex">
-          <h6 class="mb-0">Navbar Fixed</h6>
-          <div class="form-check form-switch ps-0 ms-auto my-auto">
-            <input class="form-check-input mt-1 ms-auto" type="checkbox" id="navbarFixed" onclick="navbarFixed(this)">
-          </div>
-        </div>
-        <hr class="horizontal dark my-3">
-        <div class="mt-2 d-flex">
-          <h6 class="mb-0">Light / Dark</h6>
-          <div class="form-check form-switch ps-0 ms-auto my-auto">
-            <input class="form-check-input mt-1 ms-auto" type="checkbox" id="dark-version" onclick="darkMode(this)">
-          </div>
-        </div>
-        <hr class="horizontal dark my-sm-4">
-        <a class="btn bg-gradient-info w-100" href="https://www.creative-tim.com/product/material-dashboard-pro">Free Download</a>
-        <a class="btn btn-outline-dark w-100" href="https://www.creative-tim.com/learning-lab/bootstrap/overview/material-dashboard">View documentation</a>
-        <div class="w-100 text-center">
-          <a class="github-button" href="https://github.com/creativetimofficial/material-dashboard" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star creativetimofficial/material-dashboard on GitHub">Star</a>
-          <h6 class="mt-3">Thank you for sharing!</h6>
-          <a href="https://twitter.com/intent/tweet?text=Check%20Material%20UI%20Dashboard%20made%20by%20%40CreativeTim%20%23webdesign%20%23dashboard%20%23bootstrap5&amp;url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fsoft-ui-dashboard" class="btn btn-dark mb-0 me-2" target="_blank">
-            <i class="fab fa-twitter me-1" aria-hidden="true"></i> Tweet
-          </a>
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.creative-tim.com/product/material-dashboard" class="btn btn-dark mb-0 me-2" target="_blank">
-            <i class="fab fa-facebook-square me-1" aria-hidden="true"></i> Share
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
   <!--   Core JS Files   -->
 <script src="/public/javascripts/core/popper.min.js"></script>
 <script src="/public/javascripts/core/bootstrap.min.js"></script>
@@ -529,6 +433,19 @@
 <script src="/public/javascripts/plugins/chartjs.min.js"></script>
 <script>
     var ctx = document.getElementById("chart-bars").getContext("2d");
+
+    var MR = '<%= margem_rentabilidade %>';
+    var CPD = '<%= margem_custos_pesquisa_desenvolvimento %>';
+    var CDA = '<%= margem_custos_depreciação_amortização %>';
+
+    var MEDEBITDA = '<%= margem_medida_EBITDA %>';
+    var RTLO = '<%= margem_receita_total_lucro_operacional %>';
+    var CJ = '<%= cobetura_juros %>';
+
+    var LAI = '<%= margem_lucro_antes_impostos %>';
+    var RL = '<%= margem_rentabilidade_liquida %>';
+    var CT = '<%= carga_tributaria %>';
+    var ICT = '<%= indice_carga_tributaria %>';
 
     new Chart(ctx, {
       type: "bar",
@@ -541,7 +458,7 @@
           borderRadius: 4,
           borderSkipped: false,
           backgroundColor: "rgba(255, 255, 255, .8)",
-          data: [50, 20, 10],
+          data: [ MR, CPD, CDA],
           maxBarThickness: 6
         }, ],
       },
@@ -614,7 +531,7 @@
     new Chart(ctx2, {
       type: "line",
       data: {
-        labels: ["EBITDA", "RTLO", "CJ"],
+        labels: ["MEDEBITDA", "RTLO", "CJ"],
         datasets: [{
           label: "Valor",
           tension: 0,
@@ -627,7 +544,7 @@
           borderWidth: 4,
           backgroundColor: "transparent",
           fill: true,
-          data: [50, 40, 300],
+          data: [MEDEBITDA, RTLO, CJ],
           maxBarThickness: 6
 
         }],
@@ -709,7 +626,7 @@
           borderWidth: 4,
           backgroundColor: "transparent",
           fill: true,
-          data: [50, 40, 300, 220],
+          data: [LAI, RL, CT, ICT],
           maxBarThickness: 6
 
         }],
@@ -793,38 +710,28 @@
 
 
 
-<!--% - Margem - Medida de Rentabilidade = LucroBruto/ReceitaLiquida
-% - Margem - Custos de Pesquisa e Desenvolvimento = PD&I/LucroBruto
-% - Margem - Custos de Depreciação e Amortização = D&A/LucroBruto
+<!--
+OK - % - Margem - Medida de Rentabilidade = LucroBruto/ReceitaLiquida
+OK - % - Margem - Custos de Pesquisa e Desenvolvimento = PD&I/LucroBruto
+OK - % - Margem - Custos de Depreciação e Amortização = D&A/LucroBruto
 
-% - Margem - Medida de EBITDA = EBITIDA/ReceitaLiquida
-% - Margem - Receita Total em Lucro Operacional = EBIT/ReceitaLiquida
-% - Cobetura de Juros = despesasFinanceiras/EBIT
+OK - % - Margem - Medida de EBITDA = EBITIDA/ReceitaLiquida
+ok - % - Margem - Receita Total em Lucro Operacional = EBIT/ReceitaLiquida
+OK - % - Cobetura de Juros = despesasFinanceiras/EBIT
 
-% - Margem - Lucro antes dos impostos = ResultadosAntesImpostos/ReceitaLiquida
-% - Margem - Rentabilidade Liquida = LucroLiquido/ReceitaLiquida
-% - Carga Tributária = Impostos/receitaLiquida
-% - Indice de Carga Tributária = Impostos/ResultadosantesdosImpostos
+ok - % - Margem - Lucro antes dos impostos = ResultadosAntesImpostos/ReceitaLiquida
+ok - % - Margem - Rentabilidade Liquida = LucroLiquido/ReceitaLiquida
+ok - % - Carga Tributária = Impostos/receitaLiquida
+ok - % - Indice de Carga Tributária = Impostos/ResultadosantesdosImpostos
 
-% - ROE = LucroLiquido/PatrimonioLiquido
-% - Payout = PagamentodeDiv.eJSCP/LucroLiquido
+OK - % - ROE = LucroLiquido/PatrimonioLiquido
+OK - % - Payout = PagamentodeDiv.eJSCP/LucroLiquido
 
 OK - R$ - EBITDA = LucroLiquido-Impostos-DespesasFinanceiras-D&A
 OK - R$ - EBIT = LucroLiquido-Impostos-DespesasFinanceiras
 OK - R$ - Valor Divida de EBITDA = (Divida-Caixa)/EBITDA
 OK - R$ - FCT = FCO+FCI+FCF
-R$ - FCL CAPEX = FCO+CAPEX
-R$ - Proporção de Investimentos = Capex/FCO
-R$ - Crescimento da Empresa = Capex/D&A
-R$ - Gasto de Capital = Capex/LucroLiquido*/-->
-
-
-
-
-
-
-
-
-
-
-
+OK - R$ - Fluxo de Caixa Livre = FCO+CAPEX
+OK - valor - Proporção de Investimentos = Capex/FCO
+OK - valor - Crescimento da Empresa = Capex/D&A
+OK - % - Gasto de Capital = Capex/LucroLiquido*/-->

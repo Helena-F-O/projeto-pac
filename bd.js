@@ -45,6 +45,12 @@ async function insertEmpresas(empresa) {
     return await conn.query(sql, [empresa.id_empresa, empresa.nome, empresa.email, empresa.cnpj, empresa.telefone, empresa.patrimonio_liquido, empresa.receita_liquida, empresa.lucro_bruto, empresa.despesas_vga, empresa.pdi, empresa.da, empresa.resultado_financeiro, empresa.resultado_antes_impostos, empresa.impostos, empresa.lucro_liquido, empresa.caixa, empresa.divida, empresa.fco, empresa.fci, empresa.capex, empresa.fcf, empresa.pagamento_div_jscp, empresa.id_usu]); 
 } 
 
+async function updateEmpresas(empresa) { 
+  const conn = await connect(); 
+  const sql = "UPDATE empresas SET nome = ?, email = ?, cnpj = ?, telefone = ?, patrimonio_liquido = ?, receita_liquida = ?, lucro_bruto = ?, despesas_vga = ?, pdi = ?, da = ?, resultado_financeiro = ?, resultado_antes_impostos = ?, impostos = ?, lucro_liquido = ?, caixa = ?, divida = ?, fco = ?, fci = ?, capex = ?, fcf = ?, pagamento_div_jscp = ? WHERE id_empresa = ?;"; 
+  return await conn.query(sql, [empresa.nome, empresa.email, empresa.cnpj, empresa.telefone, empresa.patrimonio_liquido, empresa.receita_liquida, empresa.lucro_bruto, empresa.despesas_vga, empresa.pdi, empresa.da, empresa.resultado_financeiro, empresa.resultado_antes_impostos, empresa.impostos, empresa.lucro_liquido, empresa.caixa, empresa.divida, empresa.fco, empresa.fci, empresa.capex, empresa.fcf, empresa.pagamento_div_jscp, empresa.id_empresa]); 
+}
+
 connect(); 
 
-module.exports = { selectCountEmpresas, selectEmpresas, selectUsuarios, insertEmpresas, insertUsuarios }
+module.exports = { updateEmpresas, selectCountEmpresas, selectEmpresas, selectUsuarios, insertEmpresas, insertUsuarios }
