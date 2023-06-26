@@ -7,10 +7,10 @@ const passport = require('../auth');
 // routes/users.js
 
 router.post(
-  '/singin',
+  '/signin',
   passport.authenticate('local', {
-    successRedirect: '/index',
-    failureRedirect: '/singin',
+    successRedirect: '/',
+    failureRedirect: '/signin',
     failureFlash: true,
   })
 );
