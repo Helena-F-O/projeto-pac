@@ -123,7 +123,7 @@
           <div class="card">
             <div class="card-header p-3 pt-2">
               <div class="icon icon-lg icon-shape bg-gradient-extra shadow-dark text-center border-radius-xl mt-n4 position-absolute">
-                <i class="material-icons opacity-10">account_balance</i>
+                <i class="material-icons opacity-10">attach_money</i>
               </div>
               <div class="text-end pt-1">
                 <p class="text-sm mb-0 text-capitalize">BI</p>
@@ -157,7 +157,7 @@
           <div class="card">
             <div class="card-header p-3 pt-2">
               <div class="icon icon-lg icon-shape bg-gradient-success shadow-success text-center border-radius-xl mt-n4 position-absolute">
-                <i class="material-icons opacity-10">credit_card</i>
+                <i class="material-icons opacity-10">attach_money</i>
               </div>
               <div class="text-end pt-1">
                 <p class="text-sm mb-0 text-capitalize">BI</p>
@@ -174,7 +174,7 @@
           <div class="card">
             <div class="card-header p-3 pt-2">
               <div class="icon icon-lg icon-shape bg-gradient-info shadow-info text-center border-radius-xl mt-n4 position-absolute">
-                <i class="material-icons opacity-10">receipt</i>
+                <i class="material-icons opacity-10">attach_money</i>
               </div>
               <div class="text-end pt-1">
                 <p class="text-sm mb-0 text-capitalize">BI</p>
@@ -270,7 +270,7 @@
                       <td>
                         <div class="d-flex px-2 py-1">
                           <div>
-                            <img src="/public/images/small-logos/documento.png" class="avatar avatar-sm me-3" alt="xd">
+                            <img src="/public/images/small-logos/apresentacao.png" class="avatar avatar-sm me-3" alt="xd">
                           </div>
                           <div class="d-flex flex-column justify-content-center">
                             <h6 class="mb-0 text-sm">Valor da Divida de EBITDA</h6>
@@ -285,7 +285,7 @@
                       <td>
                         <div class="d-flex px-2 py-1">
                           <div>
-                            <img src="/public/images/small-logos/bolsa-de-dinheiro.png" class="avatar avatar-sm me-3" alt="atlassian">
+                            <img src="/public/images/small-logos/apresentacao.png" class="avatar avatar-sm me-3" alt="atlassian">
                           </div>
                           <div class="d-flex flex-column justify-content-center">
                             <h6 class="mb-0 text-sm">Proporção de Investimentos</h6>
@@ -315,7 +315,247 @@
                       <td>
                         <div class="d-flex px-2 py-1">
                           <div>
-                            <img src="/public/images/small-logos/carrinho-de-compras.png" class="avatar avatar-sm me-3" alt="spotify">
+                            <img src="/public/images/small-logos/simbolo-de-porcentagem.png" class="avatar avatar-sm me-3" alt="team7">
+                          </div>
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Medida de Rentabilidade</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="align-middle">
+                        <div class="progress-wrapper w-75 mx-auto">
+                          <div class="progress-info">
+                            <div class="progress-percentage">
+                              <span class="text-xs font-weight-bold"><%= margem_rentabilidade %>%</span>
+                            </div>
+                          </div>
+                          <div class="progress">
+                            <div class="progress-bar bg-gradient-info w-<%= margem_rentabilidade %>" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="25"></div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div>
+                            <img src="/public/images/small-logos/simbolo-de-porcentagem.png" class="avatar avatar-sm me-3" alt="team7">
+                          </div>
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Custos de Pesquisa e Desenvolvimento</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="align-middle">
+                        <div class="progress-wrapper w-75 mx-auto">
+                          <div class="progress-info">
+                            <div class="progress-percentage">
+                              <span class="text-xs font-weight-bold"><%= margem_custos_pesquisa_desenvolvimento %>%</span>
+                            </div>
+                          </div>
+                          <div class="progress">
+                            <div class="progress-bar bg-gradient-info w-<%= margem_custos_pesquisa_desenvolvimento %>" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="25"></div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div>
+                            <img src="/public/images/small-logos/simbolo-de-porcentagem.png" class="avatar avatar-sm me-3" alt="team7">
+                          </div>
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Custos de Depreciação e Amortização</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="align-middle">
+                        <div class="progress-wrapper w-75 mx-auto">
+                          <div class="progress-info">
+                            <div class="progress-percentage">
+                              <span class="text-xs font-weight-bold"><%= margem_custos_depreciação_amortização %>%</span>
+                            </div>
+                          </div>
+                          <div class="progress">
+                            <div class="progress-bar bg-gradient-info w-<%= margem_custos_depreciação_amortização %>" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="25"></div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div>
+                            <img src="/public/images/small-logos/simbolo-de-porcentagem.png" class="avatar avatar-sm me-3" alt="team7">
+                          </div>
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Medida de EBITDA</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="align-middle">
+                        <div class="progress-wrapper w-75 mx-auto">
+                          <div class="progress-info">
+                            <div class="progress-percentage">
+                              <span class="text-xs font-weight-bold"><%= margem_medida_EBITDA %>%</span>
+                            </div>
+                          </div>
+                          <div class="progress">
+                            <div class="progress-bar bg-gradient-info w-<%= margem_medida_EBITDA %>" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="25"></div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div>
+                            <img src="/public/images/small-logos/simbolo-de-porcentagem.png" class="avatar avatar-sm me-3" alt="team7">
+                          </div>
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Receita Total em Lucro Operacinal</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="align-middle">
+                        <div class="progress-wrapper w-75 mx-auto">
+                          <div class="progress-info">
+                            <div class="progress-percentage">
+                              <span class="text-xs font-weight-bold"><%= margem_receita_total_lucro_operacional %>%</span>
+                            </div>
+                          </div>
+                          <div class="progress">
+                            <div class="progress-bar bg-gradient-info w-<%= margem_receita_total_lucro_operacional %>" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="25"></div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div>
+                            <img src="/public/images/small-logos/simbolo-de-porcentagem.png" class="avatar avatar-sm me-3" alt="team7">
+                          </div>
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Cobertura de Juros</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="align-middle">
+                        <div class="progress-wrapper w-75 mx-auto">
+                          <div class="progress-info">
+                            <div class="progress-percentage">
+                              <span class="text-xs font-weight-bold"><%= cobetura_juros %>%</span>
+                            </div>
+                          </div>
+                          <div class="progress">
+                            <div class="progress-bar bg-gradient-info w-<%= cobetura_juros %>" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="25"></div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div>
+                            <img src="/public/images/small-logos/simbolo-de-porcentagem.png" class="avatar avatar-sm me-3" alt="team7">
+                          </div>
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Lucro Antes dos Impostos</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="align-middle">
+                        <div class="progress-wrapper w-75 mx-auto">
+                          <div class="progress-info">
+                            <div class="progress-percentage">
+                              <span class="text-xs font-weight-bold"><%= margem_lucro_antes_impostos %>%</span>
+                            </div>
+                          </div>
+                          <div class="progress">
+                            <div class="progress-bar bg-gradient-info w-<%= margem_lucro_antes_impostos %>" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="25"></div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div>
+                            <img src="/public/images/small-logos/simbolo-de-porcentagem.png" class="avatar avatar-sm me-3" alt="team7">
+                          </div>
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Rentabilidade Liquida</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="align-middle">
+                        <div class="progress-wrapper w-75 mx-auto">
+                          <div class="progress-info">
+                            <div class="progress-percentage">
+                              <span class="text-xs font-weight-bold"><%= margem_rentabilidade_liquida %>%</span>
+                            </div>
+                          </div>
+                          <div class="progress">
+                            <div class="progress-bar bg-gradient-info w-<%= margem_rentabilidade_liquida %>" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="25"></div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div>
+                            <img src="/public/images/small-logos/simbolo-de-porcentagem.png" class="avatar avatar-sm me-3" alt="team7">
+                          </div>
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Carga Tributária</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="align-middle">
+                        <div class="progress-wrapper w-75 mx-auto">
+                          <div class="progress-info">
+                            <div class="progress-percentage">
+                              <span class="text-xs font-weight-bold"><%= carga_tributaria %>%</span>
+                            </div>
+                          </div>
+                          <div class="progress">
+                            <div class="progress-bar bg-gradient-info w-<%= carga_tributaria %>" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="25"></div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div>
+                            <img src="/public/images/small-logos/simbolo-de-porcentagem.png" class="avatar avatar-sm me-3" alt="team7">
+                          </div>
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Indice de Carga Tributária</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="align-middle">
+                        <div class="progress-wrapper w-75 mx-auto">
+                          <div class="progress-info">
+                            <div class="progress-percentage">
+                              <span class="text-xs font-weight-bold"><%= indice_carga_tributaria %>%</span>
+                            </div>
+                          </div>
+                          <div class="progress">
+                            <div class="progress-bar bg-gradient-info w-<%= indice_carga_tributaria %>" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="25"></div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div>
+                            <img src="/public/images/small-logos/simbolo-de-porcentagem.png" class="avatar avatar-sm me-3" alt="spotify">
                           </div>
                           <div class="d-flex flex-column justify-content-center">
                             <h6 class="mb-0 text-sm">Gasto de Capital</h6>
@@ -339,7 +579,7 @@
                       <td>
                         <div class="d-flex px-2 py-1">
                           <div>
-                            <img src="/public/images/small-logos/alvo.png" class="avatar avatar-sm me-3" alt="jira">
+                            <img src="/public/images/small-logos/simbolo-de-porcentagem.png" class="avatar avatar-sm me-3" alt="jira">
                           </div>
                           <div class="d-flex flex-column justify-content-center">
                             <h6 class="mb-0 text-sm">ROE</h6>
@@ -363,7 +603,7 @@
                       <td>
                         <div class="d-flex px-2 py-1">
                           <div>
-                            <img src="/public/images/small-logos/foguete.png" class="avatar avatar-sm me-3" alt="invision">
+                            <img src="/public/images/small-logos/simbolo-de-porcentagem.png" class="avatar avatar-sm me-3" alt="invision">
                           </div>
                           <div class="d-flex flex-column justify-content-center">
                             <h6 class="mb-0 text-sm">Payout</h6>

@@ -107,12 +107,12 @@ router.get('/dash', async function (req, res) {
     const margem_custos_pesquisa_desenvolvimento = parseFloat((results[0].pdi/results[0].lucro_bruto)*100).toFixed(0);
     const margem_custos_depreciação_amortização = parseFloat((results[0].da/results[0].lucro_bruto)*100).toFixed(0);
 
-    const EBITDA = parseFloat(results[0].lucro_liquido-results[0].impostos-results[0].despesas_financeiras-results[0].da).toFixed(2);
-    const EBIT = parseFloat(results[0].lucro_liquido-results[0].impostos-results[0].despesas_financeiras).toFixed(2);
+    const EBITDACalc = parseFloat(results[0].lucro_liquido-results[0].impostos-results[0].despesas_financeiras-results[0].da).toFixed(2);
+    const EBITCalc = parseFloat(results[0].lucro_liquido-results[0].impostos-results[0].despesas_financeiras).toFixed(2);
 
-    const margem_medida_EBITDA = parseFloat(EBITDA/results[0].receita_liquida).toFixed(2);
-    const margem_receita_total_lucro_operacional = parseFloat((EBIT/results[0].receita_liquida)*100).toFixed(0);
-    const cobetura_juros = parseFloat((results[0].despesas_financeiras/EBIT)*100).toFixed(0);
+    const margem_medida_EBITDA = parseFloat(EBITDACalc/results[0].receita_liquida).toFixed(2);
+    const margem_receita_total_lucro_operacional = parseFloat((EBITCalc/results[0].receita_liquida)*100).toFixed(0);
+    const cobetura_juros = parseFloat((results[0].despesas_financeiras/EBITCalc)*100).toFixed(0);
     
     const margem_lucro_antes_impostos = parseFloat((results[0].resultado_antes_impostos/ results[0].receita_liquida)*100).toFixed(0);
     const margem_rentabilidade_liquida = parseFloat((results[0].lucro_liquido/ results[0].receita_liquida)*100).toFixed(0);
@@ -123,12 +123,15 @@ router.get('/dash', async function (req, res) {
     const payout = parseFloat((results[0].pagamento_div_jscp/results[0].lucro_liquido)*100).toFixed(0);
     
    
-    const valor_divida_EBITDA = parseFloat((results[0].divida-results[0].caixa)/EBITDA).toFixed(2);
-    const FCT = parseFloat(results[0].fco+results[0].fci+results[0].fcf).toFixed(2);
-    const fluxo_caixa_livre = parseFloat(results[0].fco+results[0].capex).toFixed(2);
-    const proporção_investimentos = parseFloat(results[0].capex/results[0].fco).toFixed(2);
-    const crescimento_empresa = parseFloat(results[0].capex/results[0].da).toFixed(2);
+    const valor_divida_EBITDA = parseFloat((results[0].divida-results[0].caixa)/EBITDACalc).toFixed(2).replace(".", ",");
+    const FCT = parseFloat(results[0].fco+results[0].fci+results[0].fcf).toFixed(2).replace(".", ",");
+    const fluxo_caixa_livre = parseFloat(results[0].fco+results[0].capex).toFixed(2).replace(".", ",");
+    const proporção_investimentos = parseFloat(results[0].capex/results[0].fco).toFixed(2).replace(".", ",");
+    const crescimento_empresa = parseFloat(results[0].capex/results[0].da).toFixed(2).replace(".", ",");
     const gasto_capital = parseFloat((results[0].capex/results[0].lucro_liquido)*100).toFixed(0);
+
+    const EBITDA = EBITDACalc.replace(".", ",");
+    const EBIT = EBITCalc.replace(".", ",");
 
     res.render('dash', { results, crescimento_empresa, proporção_investimentos, fluxo_caixa_livre, FCT, valor_divida_EBITDA, payout, ROE, indice_carga_tributaria, carga_tributaria, margem_rentabilidade_liquida, margem_lucro_antes_impostos, cobetura_juros, margem_receita_total_lucro_operacional, margem_medida_EBITDA, margem_custos_depreciação_amortização, margem_custos_pesquisa_desenvolvimento, margem_rentabilidade, gasto_capital, EBIT, EBITDA });
   } catch (error) { 
